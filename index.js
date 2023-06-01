@@ -18,4 +18,4 @@ app.use(cors());
 app.use("/students",isAuthenticated,studentsRouter)
 app.use("/users",userRouter )
 //starting the server
-app.listen(PORT, ()=>console.log("server running in localhost:9090")) 
+app.listen(PORT, ()=>console.log("server running in localhost:9090"))
