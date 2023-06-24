@@ -1,8 +1,6 @@
 import express from "express"
 import dotenv from "dotenv"
-import { studentsRouter } from "./Routers/students.js";
 import { userRouter } from "./Routers/users.js";
-import { isAuthenticated } from "./Authentication/auth.js";
 import cors from "cors"
 
 //confgure the environment
@@ -14,8 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-//studers routers
-app.use("/students",isAuthenticated,studentsRouter)
+//routers
 app.use("/users",userRouter )
 //starting the server
 app.listen(PORT, ()=>console.log("server running in localhost:9090"))

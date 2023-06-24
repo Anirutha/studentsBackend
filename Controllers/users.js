@@ -18,7 +18,6 @@ export function getUser(userEmail){
 export function generateJwtToken(id){
     return jwt.sign(
         {id}, 
-        process.env.SECRETKEY, 
-        {expiresIn:"30d"}
+        process.env.SECRETKEY
         )
 }
